@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+             xmlns:local="clr-namespace:SfDataGridSample"
+             x:Class="SfDataGridSample.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:EmployeeViewModel x:Name="viewModel"/>
+    </ContentPage.BindingContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+    
+        <syncfusion:SfDataGrid x:Name="dataGrid"
+                               GridLinesVisibility="Both"
+                               HeaderGridLinesVisibility="Both"
+                               ColumnWidthMode="Auto"
+                               Grid.Row="0"
+                               Grid.Column="0"
+                               AutoGenerateColumnsMode="None"
+                               ItemsSource="{Binding Employees}">
+
+            <syncfusion:SfDataGrid.Columns>
+            <syncfusion:DataGridTemplateColumn MappingName="EmployeeStatus"
+                                   HeaderText="EmployeeStatus">
+                <syncfusion:DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <CheckBox IsChecked="{Binding EmployeeStatus}"
+                                ></CheckBox>
+                        </StackLayout>
+                    </DataTemplate>
+                </syncfusion:DataGridTemplateColumn.CellTemplate>
+            </syncfusion:DataGridTemplateColumn>
+            <syncfusion:DataGridNumericColumn MappingName="EmployeeID"
+                                                  HeaderText="Employee ID"
+                                                  Format="#" />
+                <syncfusion:DataGridTextColumn MappingName="Name"
+                                               HeaderText="Employee Name" />
+                <syncfusion:DataGridTextColumn MappingName="Title"
+                                               HeaderText="Designation" />
+                <syncfusion:DataGridDateColumn MappingName="HireDate"
+                                               HeaderText="Hire Date" />
+
+            </syncfusion:SfDataGrid.Columns>
+        </syncfusion:SfDataGrid>
+        <Button Clicked="Button_Clicked" 
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="Click"/>
+    </Grid>
+</ContentPage>
