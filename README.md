@@ -1,5 +1,5 @@
-# How to retrieve the actual checkBox in a cell using rowIndex in a DataGridTemplateColumn?
-In this article, we will show you how to retrieve the actual checkBox in a cell using rowIndex in a DataGridTemplateColumn in [.Net Maui DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid).
+# How to retrieve the cell content using the rowIndex in a DataGridTemplateColumn of the .NET MAUI DataGrid?
+In this article, we will show you how to retrieve the cell content using the rowIndex in a DataGridTemplateColumn of the [.Net Maui DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid).
 
 ## xaml
 ```
@@ -54,7 +54,7 @@ In this article, we will show you how to retrieve the actual checkBox in a cell 
 ```
 
 ## C#
-The below code illustrates how to retrieve the actual checkBox in a cell using rowIndex in a DataGridTemplateColumn in DataGrid.
+The below code illustrates how to retrieve the cell content using the rowIndex and mapping name in DataGrid.
 ```
 private void Button_Clicked(object sender, EventArgs e)
 {
@@ -87,10 +87,9 @@ Take a moment to explore this [documentation](https://help.syncfusion.com/maui/d
  
 ##### Conclusion
  
-I hope you enjoyed learning about how to retrieve the actual checkBox in a cell using rowIndex in a DataGridTemplateColumn in .NET MAUI DataGrid (SfDataGrid).
+I hope you enjoyed learning about how to retrieve the cell content using the rowIndex in a DataGridTemplateColumn of the .NET MAUI DataGrid (SfDataGrid).
  
 You can refer to our [.NET MAUI DataGrid’s feature tour](https://www.syncfusion.com/maui-controls/maui-datagrid) page to learn about its other groundbreaking feature representations. You can also explore our [.NET MAUI DataGrid Documentation](https://help.syncfusion.com/maui/datagrid/getting-started) to understand how to present and manipulate data. 
 For current customers, you can check out our .NET MAUI components on the [License and Downloads](https://www.syncfusion.com/sales/teamlicense) page. If you are new to Syncfusion, you can try our 30-day [free trial](https://www.syncfusion.com/downloads/maui) to explore our .NET MAUI DataGrid and other .NET MAUI components.
  
 If you have any queries or require clarifications, please let us know in the comments below. You can also contact us through our [support forums](https://www.syncfusion.com/forums), [Direct-Trac](https://support.syncfusion.com/create) or [feedback portal](https://www.syncfusion.com/feedback/maui?control=sfdatagrid), or the feedback portal. We are always happy to assist you!
-  
